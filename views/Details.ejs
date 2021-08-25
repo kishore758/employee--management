@@ -1,0 +1,20 @@
+<%- layout('Hello.ejs') %> 
+    <h1> <%= employee.empName %> </h1>
+    <ul>
+        <li>Age: <%= employee.age %> </li>
+        <li> Department: <%= employee.dept %> </li>
+    </ul>
+
+    <button><a href="/employee">All Employees</a></button>
+    
+    <br>
+    <br>
+
+    <button><a href="/employee/<%= employee._id %>/edit">Edit this Profile</a></button>
+
+
+    <br>
+    <br>
+    <form action="/employee/<%= employee._id %>?_method=DELETE" method="POST">
+        <button>Delete</button>
+    </form>

@@ -1,0 +1,7 @@
+<%- layout('Hello.ejs') %> 
+    <h1>Employee Detials</h1>
+    <ul>
+        <% for(let employee of employees ) { %>
+            <li> <a href="/employee/<%= employee._id %> "><%= employee.empName %> </a> </li>
+        <% } %>
+    </ul>
